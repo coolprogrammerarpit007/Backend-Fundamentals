@@ -9,7 +9,7 @@ def show_invoices(request):
         "invoice_total":15000,
     }
     
-    return render(request,"templates/cust_name.html",data)
+    return render(request,"cust_name.html",data)
 
 def index(Request):
     return HttpResponse("Hello World, you are on the Invoice Page. Nice to have you all!")
@@ -44,4 +44,4 @@ def orders(request):
     ]
     
     
-    return render(request,"templates/orders.html",{"customers":customers})
+    return render(request,"orders.html",{"customers":customers})
