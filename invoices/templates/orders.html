@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Orders</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Poppins, sans-serif;
+      }
+      
+      body {
+        background: #f4f7fb;
+      }
+      
+      /* Header */
+      
+      .header {
+        height: 80px;
+        background: #111827;
+        color: white;
+      
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      
+        padding: 0 60px;
+      
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+      
+      .logo {
+        font-size: 28px;
+        font-weight: 700;
+      }
+      
+      .logo span {
+        color: #60a5fa;
+      }
+      
+      .search {
+        width: 320px;
+      }
+      
+      .search input {
+        width: 100%;
+        padding: 14px 20px;
+      
+        border: none;
+        outline: none;
+      
+        border-radius: 50px;
+      
+        font-size: 15px;
+      }
+      
+      /* Statistics */
+      
+      .stats {
+        max-width: 1400px;
+      
+        margin: 40px auto;
+      
+        display: grid;
+      
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      
+        gap: 25px;
+      
+        padding: 0 40px;
+      }
+      
+      .stat {
+        background: white;
+      
+        border-radius: 20px;
+      
+        padding: 30px;
+      
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+      }
+      
+      .stat h1 {
+        font-size: 38px;
+      
+        color: #2563eb;
+      
+        margin-bottom: 10px;
+      }
+      
+      .stat p {
+        color: #666;
+      }
+      
+      /* Table */
+      
+      .wrapper {
+        max-width: 1400px;
+      
+        margin: auto;
+      
+        padding: 0 40px 60px;
+      }
+      
+      .table {
+        background: white;
+      
+        border-radius: 25px;
+      
+        overflow: hidden;
+      
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+      }
+      
+      .table-header {
+        display: grid;
+      
+        grid-template-columns:
+          2fr
+          2fr
+          1fr
+          1.3fr
+          1fr
+          1fr;
+      
+        padding: 22px 30px;
+      
+        background: #111827;
+      
+        color: white;
+      
+        font-weight: 600;
+      }
+      
+      .row {
+        display: grid;
+      
+        grid-template-columns:
+          2fr
+          2fr
+          1fr
+          1.3fr
+          1fr
+          1fr;
+      
+        padding: 20px 30px;
+      
+        align-items: center;
+      
+        transition: 0.3s;
+      
+        border-bottom: 1px solid #ececec;
+      }
+      
+      .row:hover {
+        background: #f8fbff;
+      
+        transform: scale(1.01);
+      }
+      
+      .customer {
+        display: flex;
+      
+        align-items: center;
+      
+        gap: 15px;
+      }
+      
+      .avatar {
+        width: 50px;
+        height: 50px;
+      
+        border-radius: 50%;
+      
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      
+        color: white;
+      
+        display: flex;
+      
+        justify-content: center;
+      
+        align-items: center;
+      
+        font-weight: 600;
+      
+        font-size: 18px;
+      }
+      
+      .name {
+        font-weight: 600;
+      }
+      
+      .city {
+        font-size: 13px;
+      
+        color: #888;
+      }
+      
+      .price {
+        font-weight: 700;
+      
+        color: #2563eb;
+      }
+      
+      .badge {
+        padding: 8px 16px;
+      
+        border-radius: 30px;
+      
+        font-size: 13px;
+      
+        font-weight: 600;
+      
+        display: inline-block;
+      }
+      
+      .green {
+        background: #dcfce7;
+      
+        color: #15803d;
+      }
+      
+      .orange {
+        background: #ffedd5;
+      
+        color: #c2410c;
+      }
+      
+      .btn {
+        padding: 10px 18px;
+      
+        border: none;
+      
+        border-radius: 12px;
+      
+        background: #111827;
+      
+        color: white;
+      
+        cursor: pointer;
+      
+        transition: 0.3s;
+      }
+      
+      .btn:hover {
+        background: #2563eb;
+      }
+      
+      @media (max-width: 1100px) {
+        .table-header {
+          display: none;
+        }
+      
+        .row {
+          grid-template-columns: 1fr;
+      
+          gap: 15px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">
+        Customer<span>Hub</span>
+      </div>
+
+      <div class="search">
+        <input placeholder="Search customers..." />
+      </div>
+    </header>
+
+    <section class="stats">
+      <div class="stat">
+        <h1>50</h1>
+        <p>Total Customers</p>
+      </div>
+
+      <div class="stat">
+        <h1>₹3.2L</h1>
+        <p>Total Revenue</p>
+      </div>
+
+      <div class="stat">
+        <h1>39</h1>
+        <p>Delivered Orders</p>
+      </div>
+
+      <div class="stat">
+        <h1>11</h1>
+        <p>Pending Orders</p>
+      </div>
+    </section>
+
+    <div class="wrapper">
+      <div class="table">
+        <div class="table-header">
+          <div>Customer</div>
+          <div>Product</div>
+          <div>Amount</div>
+          <div>Purchase Date</div>
+          <div>Status</div>
+          <div></div>
+        </div>
+
+        <!-- Row -->
+
+        {% for customer in customers %}
+          <div class="row">
+            <div class="customer">
+              <div class="avatar">{{customer.customer_name|slice:":1"|capfirst}}</div>
+
+              <div>
+                <div class="name">{{customer.customer_name}}</div>
+
+                <div class="city">{{customer.customer_home}}</div>
+              </div>
+            </div>
+
+            <div>{{customer.product_purchased}}</div>
+
+            <div class="price">₹{{customer.purchase_amount|floatformat:2}}</div>
+
+            <div>{{ customer.purchase_date}}</div>
+
+            <div>
+              {% if customer.order_delivered %}
+                <span class="badge green">Delivered</span>
+              {% else %}
+                <span class="badge green">Un-Delivered</span>
+              {% endif %}
+            </div>
+
+            <div>
+              <button class="btn">View</button>
+            </div>
+          </div>
+        {% endfor %}
+
+      </div>
+    </div>
+  </body>
+</html>
