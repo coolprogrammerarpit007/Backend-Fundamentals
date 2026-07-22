@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invoices</title>
-</head>
-<body>
-    <h1>This is our Invoices Page</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+
+
+{% comment %} Overriding the  {% endcomment %}
+
+{% block title %}Home{% endblock %}
+{% comment %} Overriding the content block {% endcomment %}
+{% block content %}
+        
+<h1>This is our Invoices Page </h1>
+
+{% endblock %}

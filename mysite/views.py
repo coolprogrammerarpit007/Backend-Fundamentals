@@ -11,8 +11,9 @@ def show_invoices(request):
     
     return render(request,"cust_name.html",data)
 
-def index(Request):
-    return HttpResponse("Hello World, you are on the Invoice Page. Nice to have you all!")
+def index(request):
+    # return HttpResponse("Hello World, you are on the Invoice Page. Nice to have you all!")
+    return render(request,"home.html")
 
 
 def orders(request):
