@@ -117,6 +117,14 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# Directories where Django looks for additional static files (development)
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
+# The absolute path to the directory where collectstatic will collect static files for production
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
