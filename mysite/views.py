@@ -3,6 +3,7 @@ from django.shortcuts import render
 
 
 
+
 def show_invoices(request):
     data = {
         "customer_name":"rahul",
